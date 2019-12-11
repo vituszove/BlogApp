@@ -33,6 +33,7 @@ router.post(
       const newBlog = new Blog({
         text: req.body.text,
         title: req.body.title,
+        tags: req.body.tags.split(",").map(tag => tag.trim()),
         user: req.user.id,
         name: user.name
       });
