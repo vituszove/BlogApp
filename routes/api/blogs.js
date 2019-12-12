@@ -92,7 +92,7 @@ router.delete("/:id", auth, async (req, res) => {
       return res.status(401).json({ msg: "User not authorized" });
     }
     await blog.remove();
-    res.json({ msg: "Post removed" });
+    res.json({ msg: "Blog removed" });
   } catch (err) {
     console.error(err.message);
     if (err.kind === "ObjectId") {
@@ -101,4 +101,29 @@ router.delete("/:id", auth, async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
+
+//@route  GET api/blogs/:id
+//@desc   Update Blog
+//@access Private
+router.put("/:id", auth, async (req, res) => {
+  try {
+    const blogid = await Blog.findById(req.params.id);
+    //Check user
+    if (blogid.user.toString() !== req.user.id) {
+      return res.status(401).json({ msg: "User not authorized" });
+    }
+
+    const blog = await Blog.findByIdAndUpdate(
+      req.params.id,
+      { $set: req.body },
+      { new: true, upsert: true }
+    );
+
+    res.json(blog);
+  } catch (err) {
+    console.error(err.message);
+    return res.status(500).json({ msg: "Server Error" });
+  }
+});
+
 module.exports = router;
