@@ -1,0 +1,111 @@
+.banner-container {
+  width: 100%;
+  min-height: 50vh;
+  background-image: url("../img/blogbanner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+h1 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  top: 45%;
+  line-height: 1.4em;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.main-text {
+  position: relative;
+  display: inline-block;
+  opacity: 0.8;
+}
+
+.back-text {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.3;
+
+  display: inline-block;
+}
+
+.skew {
+  animation: skew 0.95s infinite alternate;
+}
+
+.glitch {
+  animation: glitch 0.8s infinite alternate;
+}
+
+@keyframes skew {
+  0% {
+    transform: skew(0deg);
+  }
+  20% {
+    transform: skew(0deg);
+  }
+  24% {
+    transform: skew(-7deg);
+  }
+  28% {
+    transform: skew(0deg);
+  }
+  70% {
+    transform: skew(0deg);
+  }
+  74% {
+    transform: skew(10deg);
+  }
+  78% {
+    transform: skew(0deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.3;
+  }
+  24% {
+    transform: translate3d(5px, 4px, 0);
+    opacity: 1;
+  }
+  28% {
+    transform: translate3d(0, 0, 0);
+  }
+  60% {
+    transform: translate3d(0, 0, 0);
+  }
+  64% {
+    transform: translate3d(-4px, -3px, 0);
+  }
+  68% {
+    transform: translate3d(0, 0, 0);
+  }
+  70% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  74% {
+    opacity: 0.3;
+    transform: translate3d(10px, -6px, 0);
+  }
+  78% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
