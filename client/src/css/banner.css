@@ -1,6 +1,6 @@
 .banner-container {
   width: 100%;
-  min-height: 50vh;
+  min-height: 45vh;
   background-image: url("../img/blogbanner.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -17,6 +17,7 @@
   font-weight: bold;
   text-align: center;
   font-size: 4rem !important;
+  font-family: BatmanForeverAlternate;
 }
 
 .main-text {

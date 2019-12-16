@@ -5,7 +5,9 @@ const Landing = () => {
   return (
     <Fragment>
       <Banner />
-      <div>Homepage</div>
+      <div className="container">
+        <h3>Latest News</h3>
+      </div>
     </Fragment>
   );
 };
