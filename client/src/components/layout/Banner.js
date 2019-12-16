@@ -3,7 +3,7 @@ import "../../css/banner.css";
 const Banner = () => {
   return (
     <div className="banner-container">
-      <h1>
+      <h1 className="gaming-news">
         <span className="main-text skew">
           GAMING NEWS
           <span className="back-text glitch">GAMING NEWS</span>

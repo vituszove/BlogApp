@@ -9,6 +9,10 @@
 .nav > .nav-header {
   display: inline;
 }
+.vertical-line {
+  height: 2rem;
+  border-left: #d16800 solid 1px;
+}
 
 .nav > .nav-header > .nav-title {
   display: inline-block;
@@ -17,28 +21,45 @@
   color: #fff;
   padding: 0.5rem;
   margin-left: 2rem;
+  text-decoration: none;
 }
 
 .nav > .nav-btn {
   display: none;
+}
+.nav-signup-btn {
+  background-color: #d16800;
+  border-radius: 50px;
+  width: 7rem;
+  text-align: center;
+  margin: 0 1rem;
+  transition: 0.2s ease-in-out;
+}
+.nav-login-btn {
+  margin: 0 1rem;
 }
 
 .nav > .nav-links {
   display: inline;
   float: right;
   font-size: 1.1rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
-.nav > .nav-links > a {
+.nav > .nav-links > .a {
   display: inline-block;
-  padding: 13px 10px 13px 10px;
+  padding: 0.5rem;
   text-decoration: none;
   color: #efefef;
 }
 
-.nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+.nav > .nav-links > .nav-signup-btn:hover {
+  background-color: #fff;
+  color: #d16800;
+  font-weight: bold;
+}
+.nav > .nav-links > .nav-login-btn:hover {
+  color: #d16800;
 }
 
 .nav > #nav-check {
@@ -51,6 +72,21 @@
     position: absolute;
     right: 0;
     top: 0.5rem;
+  }
+  .nav-signup-btn {
+    background-color: #333;
+    text-align: left;
+    margin: 0;
+    transition: 0.2s ease-in-out;
+  }
+
+  .nav > .nav-links > .nav-signup-btn:hover {
+    background-color: #333;
+    color: #d16800;
+    font-weight: 400;
+  }
+  .nav-login-btn {
+    margin: 0;
   }
   .nav > .nav-header > .nav-title {
     margin-left: 0;
@@ -82,7 +118,7 @@
     top: 50px;
     left: 0px;
   }
-  .nav > .nav-links > a {
+  .nav > .nav-links > .a {
     display: block;
     width: 100%;
   }

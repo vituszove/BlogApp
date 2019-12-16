@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 import "../../css/navbar.css";
 const Navbar = () => {
   return (
@@ -6,7 +7,9 @@ const Navbar = () => {
       <div className="nav">
         <input type="checkbox" id="nav-check" />
         <div className="nav-header">
-          <div className="nav-title">MGN</div>
+          <Link to="/" className="nav-title">
+            MGN
+          </Link>
         </div>
         <div className="nav-btn">
           <label htmlFor="nav-check">
@@ -17,8 +20,13 @@ const Navbar = () => {
         </div>
 
         <div className="nav-links">
-          <a href="#!">SIGNUP</a>
-          <a href="#!">LOGIN</a>
+          <Link to="/register" className="a nav-signup-btn">
+            SIGN UP
+          </Link>
+
+          <Link to="/login" className="a nav-login-btn">
+            LOGIN
+          </Link>
         </div>
       </div>
     </Fragment>
